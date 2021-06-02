@@ -2,7 +2,7 @@
 
 ### Description
 This is the code for the paper   
-**Unsupervised  Learning  of  Depth  Estimation  and  Visual Odometry  for  Sparse  Light  Field  Cameras**,  
+**Burst Imaging for Light-Constrained Structure-From-Motion**,  
 Ahalya Ravendran, Mitch Bryson and Donald G. Dansereau,   
 under review for submission at RA-L IEEE Robotics and Automation Society 2021. Preprint [here](https://arxiv.org/abs/xxxx.xxxxx).  
 
