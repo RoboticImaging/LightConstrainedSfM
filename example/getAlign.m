@@ -196,6 +196,5 @@ end
 [aH aW] = size(mean(AI,3)) %aligned image size
 R = R(1:aH,1:aW,:);
 EI = R(:)-AI(:);
-E = (abs(EI(:)));
 MSE = mean(mean((EI.^2))); %calculating MSE
 end
