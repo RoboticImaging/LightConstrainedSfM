@@ -48,7 +48,7 @@ imshow(cell2mat(imA(n-1))), title('An aligned image');
 %% Temporal Merging of aligned stack to common pose
 
 %extracting individual channels for merging
-[R0,G0,B0] =  getChan(common);
+[R0,G0,B0] =  getChan(R);
 for i = 1:n-1
     [tempR,tempG,tempB] = getChan(cell2mat(imA(i)));
     Rx(i) = {tempR};
