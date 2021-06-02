@@ -1,4 +1,4 @@
-function [imMt, imMb, imMs, imMr, imMe] = getMerge(common, a_stack)
+function [imMt, imMb, imMs] = getMerge(common, a_stack)
 
 %initializing variables for merging
 T = 8; %Tile size for merging
@@ -98,5 +98,3 @@ end
 imMt = Iov; %Temporal Merged Image
 imMb = imbilatfilt(Iov, ve); %Denoising using Bilateral Filter on Temporal Merged Image
 imMs = Is; %Final Spatial Image
-imMe = M0img;
-imMr = Irov;
