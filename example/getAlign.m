@@ -1,4 +1,4 @@
-function [R, AI, MSE] = getAlign(R, A, B, S)
+function [common, AI, MSE] = getAlign(R, A, B, S)
 %This function aligns every image in the burst with the given reference
 %image and generate aligned images for merging pipeline.
 
@@ -194,7 +194,7 @@ for ii = L-1:-1:1 %For each Pyramid Level
 end
 
 [aH aW] = size(mean(AI,3)) %aligned image size
-R = R(1:aH,1:aW,:);
-EI = R(:)-AI(:);
+common = R(1:aH,1:aW,:);
+EI = common(:)-AI(:);
 MSE = mean(mean((EI.^2))); %calculating MSE
 end
