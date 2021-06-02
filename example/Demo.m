@@ -58,11 +58,11 @@ end
 
 %individually merging each plane
 disp('Merging Plane R');
-[RimMt, RimMb, RimMs, RimMr, RimMe] = getMerge(R0,Rx);
+[RimMt, RimMb, RimMs] = getMerge(R0,Rx);
 disp('Merging Plane G');
-[GimMt, GimMb, GimMs, GimMr, GimMe] = getMerge(G0,Gx);
+[GimMt, GimMb, GimMs] = getMerge(G0,Gx);
 disp('Merging Plane B');
-[BimMt, BimMb, BimMs, BimMr, BimMe] = getMerge(B0,Bx);
+[BimMt, BimMb, BimMs] = getMerge(B0,Bx);
 
 %visualizing merged images
 imM1 = cat(3, RimMt, GimMt, BimMt);
