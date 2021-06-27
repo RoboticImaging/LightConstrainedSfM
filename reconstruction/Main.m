@@ -8,10 +8,9 @@ for scene = 1 %:20
 
 n = 7; %number of images in the burst
 
-%reading raw images within a burst of a particular scene;
+%reading raw images within a burst of a particular scene; Burst with no fixed-pattern noise
 for frame = 1:n
-%filename = ['D:\reconstruction\' num2str(scene,'%02d') '\' num2str(burst,'%02d') '\' num2str(frame,'%02d') '.raw'];
-filename = ['F:Extras\Bin\E\Raw\' num2str(scene, '%02d') '\' num2str(burst, '%02d') '\' num2str(frame, '%02d') '.raw'];
+filename = ['D:\reconstruction\' num2str(scene,'%02d') '\' num2str(burst,'%02d') '\' num2str(frame,'%02d') '.raw'];
 stack(:,:,frame) = LFConvertToFloat(LFReadRaw(filename, '16bit', [2992 2500]));
 end
 
@@ -58,16 +57,16 @@ disp('Merging Plane B');
 
 %visualizing merged images
 imM1 = setChan(RimMt, G1imMt, G2imMt, BimMt); %temporally merged images
-imwrite(LFHistEqualize(imM1(1:2:end, 2:2:end)), sprintf('F:\\M\\%02d\\%02d\\%02d.png', scene, burst, frame));
+imwrite(LFHistEqualize(imM1(1:2:end, 2:2:end)), sprintf('D:\\reconstruction\\results\\%02d\\%02d\\%02d.png', scene, burst, frame));
 
 imM2 = setChan(RimMb, G1imMb, G2imMb, BimMb); %bilateral filtering on temporally merged images
-imwrite(LFHistEqualize(imM2(1:2:end, 2:2:end)), sprintf('F:\\M\\%02d\\%02d\\%02d.png', scene, burst, frame));
+imwrite(LFHistEqualize(imM2(1:2:end, 2:2:end)), sprintf('D:\\reconstruction\\results\\%02d\\%02d\\%02d.png', scene, burst, frame));
 
 imM3 = setChan(RimMs, G1imMs, G2imMb, BimMs); %spatial filtering on temporally merged images
-imwrite(LFHistEqualize(imM3(1:2:end, 2:2:end)), sprintf('F:\\M\%02d\\%02d\\%02d.png', scene, burst, frame));
+imwrite(LFHistEqualize(imM3(1:2:end, 2:2:end)), sprintf('D:\\reconstruction\\results\\%02d\\%02d\\%02d.png', scene, burst, frame));
 
 common = setChan(RR, RG1, RG2, RB); 
-imwrite(LFHistEqualize(common(1:2:end, 2:2:end)), sprintf('F:\\N\\%02d\\%02d\\%02d.png', scene, burst, frame)); %conventional noisy common pose
+imwrite(LFHistEqualize(common(1:2:end, 2:2:end)), sprintf('D:\\reconstruction\\results\\%02d\\%02d\\%02d.png', scene, burst, frame)); %conventional noisy common pose
 toc
 
 beep
