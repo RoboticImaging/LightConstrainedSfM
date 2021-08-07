@@ -3,15 +3,15 @@ clear all
 clc
 
 tic
-for scene = 1 %:20
- for burst = 1 %:22
+for scene = 1 %1:20 if there are 20 scenes
+ for burst = 1 %1:22 if there are 20 bursts
 
 n = 7; %number of images in the burst
 
 %reading raw images within a burst of a particular scene; Burst with no fixed-pattern noise
 for frame = 1:n
 filename = ['D:\reconstruction\' num2str(scene,'%02d') '\' num2str(burst,'%02d') '\' num2str(frame,'%02d') '.raw'];
-stack(:,:,frame) = LFConvertToFloat(LFReadRaw(filename, '16bit', [2992 2500]));
+stack(:,:,frame) = LFConvertToFloat(LFReadRaw(filename, '16bit', [2992 2500])); %for more details check the documentation from LiFF Toolbox
 end
 
 
@@ -62,7 +62,7 @@ imwrite(LFHistEqualize(imM1(1:2:end, 2:2:end)), sprintf('D:\\reconstruction\\res
 imM2 = setChan(RimMb, G1imMb, G2imMb, BimMb); %bilateral filtering on temporally merged images
 imwrite(LFHistEqualize(imM2(1:2:end, 2:2:end)), sprintf('D:\\reconstruction\\results\\%02d\\%02d\\%02d.png', scene, burst, frame));
 
-imM3 = setChan(RimMs, G1imMs, G2imMb, BimMs); %spatial filtering on temporally merged images
+imM3 = setChan(RimMs, G1imMs, G2imMb, BimMs); %spatial filtering using weiner filtering on temporally merged images
 imwrite(LFHistEqualize(imM3(1:2:end, 2:2:end)), sprintf('D:\\reconstruction\\results\\%02d\\%02d\\%02d.png', scene, burst, frame));
 
 common = setChan(RR, RG1, RG2, RB); 
