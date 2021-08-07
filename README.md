@@ -2,8 +2,7 @@
 
 ### Description
 This is the code for the paper   
-**Burst Imaging for Light-Constrained Structure-From-Motion**, Ahalya Ravendran, Mitch Bryson and Donald G. Dansereau,   
-Working towards submission at RA-L IEEE Robotics and Automation Society 2021. Preprint [here](https://arxiv.org/abs/xxxx.xxxxx).  
+**Burst Imaging for Light-Constrained Structure-From-Motion**, Ahalya Ravendran, Mitch Bryson and Donald G. Dansereau.  
 
 For further information please see the [Project Website](https://roboticimaging.org/Projects/BurstSfM).
 
