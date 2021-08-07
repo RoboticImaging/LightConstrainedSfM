@@ -42,7 +42,7 @@ for i = 1:T/2:H-T+1
           altimage = cell2mat(m_stack(index));
           atile = altimage(i:i+T-1,j:j+T-1);
           fourierA = fft2(atile,2*T,2*T);
-          v = var(atile(:)); %calculating noise variance in the image
+          v = var(ctile(:)/sqrt(n)); %calculating noise variance in the image
           Dz = abs(fourierC-fourierA);
           Dzs = Dz.^2;
           Az = Dzs./(Dzs + C*v); %voting contribution
@@ -70,21 +70,21 @@ for i = 1:T/2:H-T+1
      Tov = real(ifft2(ifftshift(Mx))); %removing ringing artifacts
      Iov(i:i+T-1,j:j+T-1) = Tov(1:T,1:T); %Image created after removing overlapping tiles artefacts
      
-     %spatial denoising
+     %spatial denoising via Wiener Filtering
      Mx = fft2(Tov,2*T,2*T);
      Tov_8 = Tov(1:T, 1:T);
-     ve = 2*var(Tov_8(:));
+     ve = v;
      Dz0 = abs(fourierC - Mx); 
      Dz02 = (Dz0).^2;
      v0 = var(Tov_8(:));
      Az0 = (Dz02)./(Dz02 + (Cm*f*v0)) ; %Az0 = (Dz02)./(Dz02 + (f*C*v0/N)+1); 
      TFs = Az0.*Mx;
      Ts = real(ifft2(TFs));
-     Is(i:i+T-1,j:j+T-1) = Ts(1:T,1:T); %Image created after spatial denoising
+     Is(i:i+T-1,j:j+T-1) = Ts(1:T,1:T); %Image created after wiener filternig
 
    end
 end
 
 imMt = Iov; %Temporal Merged Image
-imMb = imbilatfilt(Iov, ve); %Denoising using Bilateral Filter on Temporal Merged Image
-imMs = Is; %Final Spatial Image
+imMb = imbilatfilt(Iov, ve); %Spatial Denoising using Bilateral Filter on Temporal Merged Image
+imMs = Is; %Spatial Denoising using Wiener Filter on Temporal Merged Image
