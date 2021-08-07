@@ -49,7 +49,7 @@ for i = 1:T/2:H-T+1
           altimage = cell2mat(m_stack(index));
           atile = altimage(i:i+T-1,j:j+T-1);
           fourierA = fft2(atile,2*T,2*T);
-          v = var(atile(:)); %calculating noise variance in the image
+          v = var(ctile(:)/sqrt(n)); %calculating noise variance in the image
           Dz = abs(fourierC-fourierA);
           Dzs = Dz.^2;
           Az = Dzs./(Dzs + C*v); %voting contribution
@@ -80,7 +80,7 @@ for i = 1:T/2:H-T+1
      Iov(i:i+T-1,j:j+T-1) = Tov(1:T,1:T); %Image created after removing overlapping tiles artefacts
      Irov(i:i+T-1,j:j+T-1) = Rov(1:T,1:T); %Image created without removing overlapping tiles artefacts
      
-     %spatial denoising
+     %spatial denoising: Wiener Filtering
      Mx = fft2(Tov,2*T,2*T);
      Tov_8 = Tov(1:T, 1:T);
      ve = 2*var(Tov_8(:));
@@ -97,4 +97,4 @@ end
 
 imMt = Iov; %Temporal Merged Image
 imMb = imbilatfilt(Iov, ve); %Denoising using Bilateral Filter on Temporal Merged Image
-imMs = Is; %Final Spatial Image
+imMs = Is; %Denoising using Weiner Filter on Temporal Merged Image
