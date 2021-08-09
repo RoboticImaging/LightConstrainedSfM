@@ -3,7 +3,7 @@ File Description
 
 | Filename | Description |  
 | ---------| ----------- |
-| [Readme.m](../reconstruction/Readme.md) | reconstruction Readme file |
+| [Readme.m](../reconstruction/Readme.md) | reconstruction: Readme file |
 | [Main.m](../reconstruction//Main.m) | This script aligns each image in a given burst from a scene to a reference image from the same burst of the same scene and temporally merge all images within the burst, and repeat it over different bursts over different scenes |
 | [Alignment.m](../reconstruction//Alignment.m) | This script prepares raw image for alignment |
 | [getAlign.m](../reconstruction//getAlign.m) | This script aligns each input image to the selected reference image using hierarchical tile-based alignment |
