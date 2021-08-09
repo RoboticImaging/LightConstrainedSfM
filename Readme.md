@@ -11,8 +11,8 @@ These are required for running the folders:
 - example: .JPG images
   - [MATLAB Image Processing Toolbox](https://au.mathworks.com/products/image.html)  
 - reconstruction: raw images
-   - [MATLAB Image Processing Toolbox](https://au.mathworks.com/products/image.html)  
-  - [LiFF Toolbox](https://github.com/doda42/LiFF)  
+  - [MATLAB Image Processing Toolbox](https://au.mathworks.com/products/image.html)  
+  - [LFToolbox](https://github.com/doda42/LFToolbox)  
 
 | Filename | Description |  
 | ---------| ----------- |
