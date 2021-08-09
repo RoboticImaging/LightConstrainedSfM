@@ -3,8 +3,12 @@ clear all
 clc
 
 tic
-for scene = 1 %1:20 if there are 20 scenes
- for burst = 1 %1:22 if there are 20 bursts
+
+sceneN = 20; %number of scenes reconstructed during experiment
+burstN = 22; %number of bursts in each scene used for reconstruction
+
+for scene = 1:sceneN
+ for burst = 1:burstN 
 
 n = 7; %number of images in the burst
 
