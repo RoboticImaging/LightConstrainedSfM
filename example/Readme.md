@@ -2,7 +2,7 @@ File Description
 
 | Filename | Description |  
 | ---------| ----------- |
-| [Readme.md](../example/Readme.md) | example Readme file|
+| [Readme.md](../example/Readme.md) | example: Readme file|
 | [Demo.m](../example/Demo.m) | Main script: The demo creates a synthetic burst of images, aligns each image in the burst to a reference image and temporally merge all images in the burst |
 | [getAlign.m](../example/getAlign.m) | This script aligns each input image to the selected reference image using hierarchical tile-based alignment |
 | [getChan.m](../example/getChan.m) | This script extracts an RGB image into three seperate channels |
