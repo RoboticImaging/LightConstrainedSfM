@@ -20,3 +20,10 @@ File Description
 | [Readme.md](../main/Readme.md) | Main Readme file. |
 | [example](../main/example) | Demonstration of the imaging pipeline used during the reconstruction on a burst with synthetic noise. |
 | [reconstruction](../main/reconstruction) | The implementation of Light-Constrained SfM on raw Bayer images over different bursts of different scenes. |
+
+| Filename | Description |  
+| ---------| ----------- |
+| [Readme.md](../main/Readme.md) | Main Readme file. |
+| [example](../main/example) | Demonstration of the imaging pipeline used during the reconstruction on a burst with synthetic noise. For further details, please read [Readme](../main/example/Readme.md) within example folder |
+| [reconstruction](../main/reconstruction) | The implementation of Light-Constrained SfM on raw Bayer images over different bursts of different scenes. For further details, please read [Readme](../main/reconstruction/Readme.md) within example folder |
+
