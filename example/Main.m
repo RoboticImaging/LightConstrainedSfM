@@ -66,8 +66,8 @@ imshow(imM1), title('Temporally merged image');
 
 imM2 = cat(3, RimMb, GimMb, BimMb);
 figure(6)
-imshow(imM2), title('Bilaterally merged image');
+imshow(imM2), title('Spatially merged image with bilateral filtering');
 
 imM3 = cat(3, RimMs, GimMs, BimMs);
 figure(7)
-imshow(imM3), title('Spatially merged image');
+imshow(imM3), title('Spatially merged image with Wiener filtering');
