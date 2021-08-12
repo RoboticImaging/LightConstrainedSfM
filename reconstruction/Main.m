@@ -46,7 +46,7 @@ end
 %Tuning Parameters for Merging
 T = 8; %tile size
 C = 8; %contribution factor for temporal denoising
-Cm = 8; %contribution factor for spatial denoising
+Cm = 8; %contribution factor for spatial denoising: Weiner
 Sp = 2; %spatial factor
 
 %individually merging each plane
@@ -66,7 +66,7 @@ imwrite(LFHistEqualize(imM1(1:2:end, 2:2:end)), sprintf('D:\\reconstruction\\res
 imM2 = setChan(RimMb, G1imMb, G2imMb, BimMb); %bilateral filtering on temporally merged images
 imwrite(LFHistEqualize(imM2(1:2:end, 2:2:end)), sprintf('D:\\reconstruction\\results\\%02d\\%02d\\%02d.png', scene, burst, frame));
 
-imM3 = setChan(RimMs, G1imMs, G2imMb, BimMs); %spatial filtering using weiner filtering on temporally merged images
+imM3 = setChan(RimMs, G1imMs, G2imMb, BimMs); %spatial filtering using Wiener filtering on temporally merged images
 imwrite(LFHistEqualize(imM3(1:2:end, 2:2:end)), sprintf('D:\\reconstruction\\results\\%02d\\%02d\\%02d.png', scene, burst, frame));
 
 common = setChan(RR, RG1, RG2, RB); 
