@@ -9,7 +9,7 @@ File Description
 | [Alignment.m](../reconstruction//Alignment.m) | This script prepares raw image for alignment |
 | [getAlign.m](../reconstruction//getAlign.m) | This script aligns each input image to the selected reference image using hierarchical tile-based alignment |
 | [getChan.m](../reconstruction//getChan.m) | This script extracts a raw image into four seperate channels |
-| [getMerge.m](../reconstruction//getMerge.m) | This script temporally merges each image in the burst to a reference image using 2D DFT voting scheme. This script subsequently sptially filters the temporally merged image using wiener and bilateral filtering |
+| [getMerge.m](../reconstruction//getMerge.m) | This script temporally merges each image in the burst to a reference image using 2D DFT voting scheme. This script subsequently sptially filters the temporally merged image using Wiener and bilateral filtering |
 | [getMin.m](../reconstruction//getMin.m) | This script get the minimum difference between two images and used during alignment stage |
 | [setChan.m](../reconstruction//setChan.m) | This script creates a final combined image from each four seperate channel |
 | [colmapscript.sh](../reconstruction//colmapscript.sh) | This script describes the settings used in COLMAP for reconstruction |
