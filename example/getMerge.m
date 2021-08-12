@@ -90,7 +90,7 @@ for i = 1:T/2:H-T+1
      Az0 = (Dz02)./(Dz02 + (Cm*f*v0)) ; %Az0 = (Dz02)./(Dz02 + (f*C*v0/N)+1); 
      TFs = Az0.*Mx;
      Ts = real(ifft2(TFs));
-     Is(i:i+T-1,j:j+T-1) = Ts(1:T,1:T); %Image created after spatial denoising
+     Is(i:i+T-1,j:j+T-1) = Ts(1:T,1:T); %Image created with Wiener Filtering
 
    end
 end
