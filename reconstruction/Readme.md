@@ -1,4 +1,5 @@
 File Description
+- Implementation is on raw Bayer images.
 - For further details regarding scripts that handles raw images, please refer to [LFToolbox Documentation](https://github.com/doda42/LFToolbox/blob/master/LFToolbox.pdf)
 
 | Filename | Description |  
