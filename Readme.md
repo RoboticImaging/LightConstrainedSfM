@@ -17,6 +17,6 @@ These are required for running the folders:
 | Filename | Description |  
 | ---------| ----------- |
 | [Readme.md](../main/Readme.md) | Main Readme file. |
-| [example](../main/example) | Demonstration of the imaging pipeline used during the reconstruction on a burst with synthetic noise. For further details, please read [Readme](../main/example/Readme.md) within example folder |
-| [reconstruction](../main/reconstruction) | The implementation of Light-Constrained SfM on raw Bayer images over different bursts of different scenes. For further details, please read [Readme](../main/reconstruction/Readme.md) within reconstruction folder |
+| [example](../main/example) | Demonstration of the imaging pipeline used during the reconstruction on a burst with synthetic noise. For further details, please read [Readme](../main/example/Readme.md) within example folder. Implementation is on deBayered images e.g. JPG or PNG images |
+| [reconstruction](../main/reconstruction) | The implementation of Light-Constrained SfM on raw Bayer images over different bursts of different scenes. For further details, please read [Readme](../main/reconstruction/Readme.md) within reconstruction folder. Implementation is on raw Bayer images. |
 
