@@ -2,7 +2,7 @@
 
 ### Description
 This is the code for the paper   
-**A. Ravendran, M. Bryson, and D. G. Dansereau, “Burst imaging for light-constrained structure-from-motion,” IEEE Robotics and Automation Letters (RA-L, ICRA), vol. 7, no. 2, pp. 1040–1047, Apr. 2022. Available [here](https://roboticimaging.org/Papers/ravendran2022burst.pdf).
+** A. Ravendran, M. Bryson, and D. G. Dansereau, “Burst imaging for light-constrained structure-from-motion,” IEEE Robotics and Automation Letters (RA-L, ICRA), vol. 7, no. 2, pp. 1040–1047, Apr. 2022. Available [here](https://roboticimaging.org/Papers/ravendran2022burst.pdf).
 
 For further information please see the [Project Website](https://roboticimaging.org/Projects/BurstSfM).
 
